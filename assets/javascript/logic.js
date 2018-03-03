@@ -1,1 +1,43 @@
-console.log("test")
+window.onload = function() { //Loads up the JavaScript after the page finishes loading
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    console.log("All Logic Processed")//Test to ensure that all of the above javascript worked. 
+
+} //closing the on load function, this should be the last line of js
