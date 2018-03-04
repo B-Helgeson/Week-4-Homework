@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <!-- CSS Reset Commented out for now, as bootstrap style has been utilized, to continue practicing with bootstrap. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <title>Crystal Collector Game</title>
@@ -13,8 +16,54 @@
 <body>
 
     <header>
-        <h1>Welcome to the Crystal Game!</h1>
+        <h1>Welcome to the Crystal Collector Game!</h1>
     </header>
+
+    <section id="instructionBox"> <!-- Left Column -->
+        <h2>Instructions</h2>
+        <div id="instructionContent">
+            <p>
+                You will be given a random target number at the start of each round. 
+            </p>
+            <p>
+                There are four crystals in the game box. By clicking on a crystal, you can add a specific amount of points to your current number.
+            </p>
+            <p>
+                You win the round by matching your current number to the target number, but if you exceed the target, you lose the game. 
+            </p>
+            <p>
+                The value of each crystal is hidden from you until you click on it. 
+            </p>
+            <p>
+                Each time a new round starts, the values of the crystals will change. 
+            </p>
+        </div> <!-- instructionContent -->
+    </section> <!-- instructionBox / Left Column-->
+
+    <section id="gameBox"> <!-- Right Column-->
+        <div> <!-- topRow -->
+            <div> <!-- currentCol -->
+                <h2>Current Number</h2>
+                    <div id="current">##</div>
+            </div> <!-- currentCol -->
+            <div> <!-- targetCol -->
+                <h2>Target Number</h2>
+                    <div id="target">##</div>
+            </div> <!-- targetCol -->
+            <div> <!-- scoreCol -->
+                <h2>Score Board</h2>
+                    Wins <div id="wins">#</div></br>
+                    Losses <div id="losses">#</div></br>
+                    </br>
+            </div> <!-- scoreCol -->
+        </div> <!-- topRow -->
+
+        <div> <!-- bottomRow / CrystalBox -->
+            Crystals Generated Here! </br>
+            #1   #2   #3   #4 </br>
+        </div>
+
+    </section> <!-- gameBox / Right Column-->
 
 
 
