@@ -63,8 +63,6 @@ $(document).ready(function() { //Loads up the JavaScript after the page finishes
 
 
 
-
-
     //button to increment then refresh page values, just to test overall functionalith... will be removed later. 
     $("#inc").click(function(){
         targetNum++;

@@ -1,4 +1,21 @@
 body {
-    background-color: aqua;
+    background-image: url("assets/images/slateBackground.jpg");
     padding: 20px;
+    max-width: 950px;
+}
+
+.panel-header {
+    height: 50px;
+}
+
+.topPan {
+    height: 150px;
+}
+
+.panLeft {
+    padding-right: 20px;
+}
+
+h4 {
+    font-size: 16px;
 }

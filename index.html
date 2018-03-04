@@ -15,55 +15,92 @@
 
 <body>
 
-    <header>
+    <header class="page-header">
         <h1>Welcome to the Crystal Collector Game!</h1>
     </header>
 
-    <section id="instructionBox"> <!-- Left Column -->
-        <h2>Instructions</h2>
-        <div id="instructionContent">
-            <p>
-                You will be given a random target number at the start of each round. 
-            </p>
-            <p>
-                There are four crystals in the game box. By clicking on a crystal, you can add a specific amount of points to your current number.
-            </p>
-            <p>
-                You win the round by matching your current number to the target number, but if you exceed the target, you lose the game. 
-            </p>
-            <p>
-                The value of each crystal is hidden from you until you click on it. 
-            </p>
-            <p>
-                Each time a new round starts, the values of the crystals will change. 
-            </p>
-        </div> <!-- instructionContent -->
-    </section> <!-- instructionBox / Left Column-->
+    <div class = "row">  <!-- Entire Game Fits into one row-->
+        <section id="instructionBox" class="col-md-5 col-xs-12 panel panel-default panLeft"> <!-- Left Column -->
+            <h2 class="panel-heading">Instructions</h2>
+            <div class="panel-body"id="instructionContent">
+                <p>
+                    You will be given a random target number at the start of each round. 
+                </p>
+                <p>
+                    There are four crystals in the game box. By clicking on a crystal, you can add a specific amount of points to your current number.
+                </p>
+                <p>
+                    You win the round by matching your current number to the target number, but if you exceed the target, you lose the game. 
+                </p>
+                <p>
+                    The value of each crystal is hidden from you until you click on it. 
+                </p>
+                <p>
+                    Each time a new round starts, the values of the crystals will change. 
+                </p>
+            </div> <!-- instructionContent -->
+        </section> <!-- instructionBox / Left Column-->
 
-    <section id="gameBox"> <!-- Right Column-->
-        <div> <!-- topRow -->
-            <div> <!-- currentCol -->
-                <h2>Current Number</h2>
-                    <div id="current">##</div>
-            </div> <!-- currentCol -->
-            <div> <!-- targetCol -->
-                <h2>Target Number</h2>
-                    <div id="target">##</div>
-            </div> <!-- targetCol -->
-            <div> <!-- scoreCol -->
-                <h2>Score Board</h2>
-                    Wins <div id="wins">#</div></br>
-                    Losses <div id="losses">#</div></br>
-                    </br>
-            </div> <!-- scoreCol -->
-        </div> <!-- topRow -->
+        <section id="gameBox" class="col-md-7 col-xs-12"> <!-- Right Column-->
+            <div class="row">
+                <div id="panel1" class="col-sm-4 panel panel-default topPan"> <!-- currentCol -->
+                    <div class="panel-heading">
+                        <h4>Current Number</h4>
+                    </div>
+                    <h2 class="panel-body" id="current">##</h2>
+                </div> <!-- currentCol -->
+                <div id="panel2" class="col-sm-4 panel panel-default topPan"> <!-- targetCol -->
+                    <div class="panel-heading">
+                        <h4>Target Number</h4>
+                    </div>
+                    <h2 class="panel-body" id="target">##</h2>
+                </div> <!-- targetCol -->
+                <div id="panel3" class="col-sm-4 panel panel-default topPan"> <!-- scoreCol -->
+                    <div class="panel-heading">
+                        <h4>Score Board</h4>
+                    </div>
+                    <div class="panel-body">
+                        </br>
+                        <strong>Wins: &nbsp; &nbsp; &nbsp;<span id="wins" class="badge">#</span></strong></br>
+                        <strong>Losses: &nbsp; <span id="losses" class="badge">#</span></strong></br>
+                        </br>
+                    </div>
+                </div> <!-- scoreCol -->
+            </div> <!-- topRow -->
 
-        <div> <!-- bottomRow / CrystalBox -->
-            Crystals Generated Here! </br>
-            #1   #2   #3   #4 </br>
-        </div>
+            <div class="panel panel-default"> <!-- bottomRow / CrystalBox -->
+                <div class="panel-heading">
+                    <h4>Crystals Generated Here!</h4>
+                </div>
+                    <div class="panel-body" id="crystalBox">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img id="crystal1" src="..." alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img id="crystal1" src="..." alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img id="crystal1" src="..." alt="...">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img id="crystal1" src="..." alt="...">
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+            </div> <!-- crystaloBox / Bottom Row, Right Column-->
 
-    </section> <!-- gameBox / Right Column-->
+        </section> <!-- gameBox / Right Column-->
+
+    </div> <!-- Closing out entire body row -->
 
 
 
@@ -71,10 +108,9 @@
 
 
 
-
-        </br>
-        </br>
-    <button id="inc">incrementor</button>
+            </br>
+            </br>
+        <button id="inc">incrementor</button>
 
 
 
