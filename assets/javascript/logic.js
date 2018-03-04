@@ -1,21 +1,22 @@
 $(document).ready(function() { //Loads up the JavaScript after the page finishes loading
 
 //defining variables used on page
-    var targetNum = 1;
+    var targetNum = 34;
     var currentNum = 2;
-    var winCount = 3;
-    var lossCount = 4;
+    var winCount = 0;
+    var lossCount = 0;
 
 //function which can be called to refresh the variables on the page at the end of each click event
     function refreshPageVars(){
-    $("target").html(targetNum.toString());
-    $("current").html(currentNum);
-    $("wins").html(winCount);
-    $("losses").html(lossCount);
+    $("#target").html(targetNum.toString());
+    $("#current").html(currentNum);
+    $("#wins").html(winCount);
+    $("#losses").html(lossCount);
     }
 
-    
-refreshPageVars();
+//initial write of page values, to be removed later. 
+    refreshPageVars();
+
 
     
     //for (var i = 0; i < letters.length; i++) {
@@ -64,10 +65,13 @@ refreshPageVars();
 
 
 
-
-
-
-
+    //button to increment then refresh page values, just to test overall functionalith... will be removed later. 
+    $("#inc").click(function(){
+        targetNum++;
+        currentNum++;
+        winCount++;
+        lossCount++;
+        refreshPageVars()});
 
 
 
