@@ -1,69 +1,46 @@
 $(document).ready(function() { //Loads up the JavaScript after the page finishes loading
 
 //defining variables used on page
-    var targetNum = 34;
-    var currentNum = 2;
+    var targetNum
+    var currentNum = 0;
     var winCount = 0;
     var lossCount = 0;
+    var crytals = [ruby, emerald, sapphire, diamond]
 
-//function which can be called to refresh the variables on the page at the end of each click event
+//function which can be called to refresh the variables on the page at the end of each round
     function refreshPageVars(){
-    $("#target").html(targetNum.toString());
-    $("#current").html(currentNum);
-    $("#wins").html(winCount);
-    $("#losses").html(lossCount);
+    $("#current").text(currentNum);
+    $("#wins").text(winCount);
+    $("#losses").text(lossCount);
+    generateTargetNum();
+    $("target").text(targetNum)
     }
+
+//function to generate a random target number.
+        //math random, math floor between 19 - 120.
+
+
+//function to generate random crystal values for c1 - c4
+        //for loop on crystals array, math floor between 1 - 12.
+
+
+
+//on click listener to add crystal values to the current number
+
+
+
+
+//values listener to alert on win or loss and then reset the game (alert upon reset)
+
+
+
 
 //initial write of page values, to be removed later. 
     refreshPageVars();
 
 
-    
-    //for (var i = 0; i < letters.length; i++) {
-      //  var letterBtn = $("<button class = 'letter-button letter letter-button-color'>");
-        //$(letterBtn).attr("data-letter", letters[i]);
-        //$(letterBtn).text(letters[i]);}
 
-
-        //writes intial guesses left value on the DOM
-//document.getElementById('winCount').innerHTML = wCount;
-//writes intial Losses value on the DOM
-//document.getElementById('lossCount').innerHTML = lCount;
-//writes intial Wins value on the DOM
-//document.getElementById('guess').innerHTML = gCount;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //button to increment then refresh page values, just to test overall functionalith... will be removed later. 
+    //button to increment then refresh page values, just to test overall functionality... will be removed later. 
     $("#inc").click(function(){
         targetNum++;
         currentNum++;
